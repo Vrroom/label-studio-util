@@ -14,6 +14,6 @@ if __name__ == '__main__':
     else:
         PORT = 7860  # Default port if not specified
     
-    httpd = HTTPServer(('localhost', PORT), CORSRequestHandler)
+    httpd = HTTPServer(('0.0.0.0', PORT), CORSRequestHandler)
     print(f"Serving at port {PORT}")
     httpd.serve_forever()
